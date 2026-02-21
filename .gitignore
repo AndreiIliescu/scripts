@@ -1,74 +1,187 @@
-# =============== PYTHON =============== #
+# ============================================================
+# PYTHON
+# ============================================================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
-.env/
-env/
-venv/
-.venv/
-pip-log.txt
-pip-delete-this-directory.txt
-/build/
-/develop-eggs/
-/dist/
-/downloads/
-/eggs/
-/lib/
-/lib64/
-/parts/
-/sdist/
-/var/
-/wheels/
-*.egg-info/
-.installed.cfg
-*.egg
 *.pyo
 *.pyd
+.Python
 
-# =============== CONFIGURATII SENSIBILE (ENVIRONMENTAL VARIABLES) =============== #
+# ============================================================
+# VIRTUAL ENVIRONMENTS
+# ============================================================
+.venv/
+venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# ============================================================
+# SENSITIVE DATA AND ENVIRONMENT VARIABLES
+# ============================================================
 .env
 .env.*
 !.env.example
-.venv
 env.ini
 .flaskenv
 secrets.json
 *.key
 *.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+config/local.py
+config/secrets.py
 
-# =============== TESTE SI ACOPERIRE =============== #
+# ============================================================
+# BUILD AND DISTRIBUTION
+# ============================================================
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ============================================================
+# TESTING AND COVERAGE
+# ============================================================
 htmlcov/
 .tox/
 .nox/
-.nosetests
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
 *.cover
+*.py,cover
 .hypothesis/
 .pytest_cache/
+pytest_cache/
 .mypy_cache/
 .dmypy.json
 dmypy.json
 .ruff_cache/
+.pytype/
 
-# =============== IDE SI EDITOARE =============== #
+# ============================================================
+# AI MODELS AND LARGE BINARY FILES
+# ============================================================
+*.pt
+*.pth
+*.onnx
+*.pb
+*.tflite
+*.mlmodel
+*.bin
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.safetensors
+*.weights
+
+# ============================================================
+# YOLO AND ULTRALYTICS OUTPUTS
+# ============================================================
+runs/
+runs/detect/
+runs/train/
+runs/val/
+ultralytics/
+datasets/
+data/coco/
+data/VOC/
+
+# ============================================================
+# JUPYTER NOTEBOOKS
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb
+
+# ============================================================
+# LOGS AND DATABASES
+# ============================================================
+*.log
+*.sqlite
+*.sqlite3
+*.db
+logs/
+log/
+
+# ============================================================
+# MEDIA AND OUTPUT FILES
+# ============================================================
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.mp3
+*.wav
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+*.svg
+*.pdf
+output/
+outputs/
+results/
+downloads/
+
+# ============================================================
+# IDEs AND EDITORS
+# ============================================================
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
-.DS_Store
-Thumbs.db
 *.sublime-project
 *.sublime-workspace
+.spyderproject.cfg
+.spyproject/
+.ropeproject/
 
-# =============== BACKUP SI TEMPORARE =============== #
+# ============================================================
+# OPERATING SYSTEM FILES
+# ============================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ============================================================
+# TEMPORARY AND BACKUP FILES
+# ============================================================
 *.bak
 *.tmp
 *.temp
-*~
+*.orig
+*.rej
