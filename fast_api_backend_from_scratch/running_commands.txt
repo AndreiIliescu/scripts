@@ -1,0 +1,24 @@
+# Running the local server:
+uvicorn fast_api_backend_from_scratch.main:app --reload
+
+# Adding an item to the list:
+curl.exe -X POST "http://127.0.0.1:8000/items?item=apple" -H "Content-Type: application/json"
+curl.exe -X POST "http://127.0.0.1:8000/items?item=orange" -H "Content-Type: application/json"
+
+# Return an item from ID:
+curl.exe -X GET http://127.0.0.1:8000/items/0            # => 'apple'
+curl.exe -X GET http://127.0.0.1:8000/items/1            # => 'orange'
+
+# Getting items from the list with a specified limit:
+curl.exe -X GET "http://127.0.0.1:8000/items?limit=5"
+
+# Return all items from the list:
+curl.exe -X GET "http://127.0.0.1:8000/items"
+
+# Sending items in a JSON format
+curl.exe -X POST "http://127.0.0.1:8000/items?text=apple"
+
+# Interactive Documentation:
+127.0.0.1:8000/docs#/
+
+127.0.0.1:8000/redoc
