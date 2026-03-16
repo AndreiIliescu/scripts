@@ -2,7 +2,7 @@
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Python](https://img.shields.io/badge/python-3.11-blue)
+![Python](https://img.shields.io/badge/python-3.14-blue)
 
 A collection of Python scripts built while learning Python. Each script is standalone and focuses on a specific concept or real-world use case, ranging from basic CLI tools to real-time AI object detection using YOLOv5.
 
@@ -26,9 +26,9 @@ A collection of Python scripts built while learning Python. Each script is stand
 
 ## About
 
-This repository contains Python scripts . Each script is self-contained and covers a different concept: object-oriented programming, external APIs, file generation, real-time computer vision, and more.
+This repository contains Python scripts and small backend applications built while learning Python. Each project focuses on a specific concept such as object oriented programming, CLI utilities, external APIs, backend development with FastAPI, and AI model integration.
 
-The goal is to apply Python fundamentals in practical, working programs rather than isolated exercises.
+The goal is to build practical programs that demonstrate real world use cases instead of isolated exercises.
 
 ---
 
@@ -46,18 +46,25 @@ The goal is to apply Python fundamentals in practical, working programs rather t
 | `youtube_downloader.py` | Downloads YouTube videos to the Desktop in the best available quality using `yt-dlp` |
 | `tiktok_downloader.py` | Downloads TikTok videos without watermark using the TikWM public API |
 | `ai_object_recognition_project/ai_object_recognition.py` | Real-time object detection via webcam using YOLOv5 and OpenCV |
+| `fast_api_backend_from_scratch/main.py` | Simple REST API built with FastAPI supporting item creation, listing, and retrieval |
+| `gemini_integration_app/app.py` | CLI chat application that integrates Google's Gemini 2.5 Flash model |
 
 ---
 
 ## Tech Stack
 
 - Python 3.14.2
-- OpenCV 4.x
+- FastAPI
+- Uvicorn
+- Pydantic
+- OpenCV 4.13.0.92
 - Ultralytics YOLOv5
 - yt-dlp
 - CurrencyConverter
 - PyQRCode
 - Requests
+- python-dotenv
+- Google GenAI SDK
 
 ---
 
@@ -168,6 +175,46 @@ python ai_object_recognition_project/ai_object_recognition.py
 
 Press `Q` to stop the webcam feed.
 
+**FastAPI Backend**
+
+```bash
+uvicorn fast_api_backend_from_scratch.main:app --reload
+```
+
+Start the local development server
+
+```bash
+http://127.0.0.1:8000/docs
+```
+
+Open the interactive API documentation
+
+```bash
+curl -X POST "http://127.0.0.1:8000/items?text=apple"
+
+curl -X GET "http://127.0.0.1:8000/items"
+
+curl -X GET "http://127.0.0.1:8000/items/0"
+```
+
+Example requests
+
+**Gemini Chat Integration**
+
+```bash
+API_KEY=your_gemini_api_key_here
+```
+
+Create a `.env` file and add your API key
+
+```bash
+python gemini_integration_app/app.py
+```
+
+Run the application
+
+Type `q` to exit the chat session
+
 ---
 
 ## Project Structure
@@ -176,6 +223,13 @@ Press `Q` to stop the webcam feed.
 scripts/
 ├── ai_object_recognition_project/
 │   └── ai_object_recognition.py
+├── fast_api_backend_from_scratch/
+│   ├── main.py
+│   └── running_commands.txt
+├── gemini_integration_app/
+│   ├── app.py
+│   ├── .env.example
+│   └── .env
 ├── areas_and_perimeters.py
 ├── calculator.py
 ├── currency_convertor.py
